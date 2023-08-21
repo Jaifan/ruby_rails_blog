@@ -1,0 +1,13 @@
+<%= form_with model: book do |form| %>
+    <div>
+        <%= form.label :author %>
+        <%= form.text_field :author %>
+    </div>
+    <div>
+        <%= form.label :age %>
+        <%= form.number_field :age %>
+    </div>
+    <div>
+        <%= form.submit %> 
+    </div>
+<% end %>
