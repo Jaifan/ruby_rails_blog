@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     def create
         @book = Book.new(book_params)
         if @book.save
-            redirect_to @book
+            redirect_to books_path
         else
             render :new, status: :unprocessable_entity
         end
@@ -22,9 +22,9 @@ class BooksController < ApplicationController
     def update 
         @book = Book.find(params[:id])
         if @book.update(book_params)
-            redirect_to @book
+            render "articles/test"
         else
-            render "Edit" , status: :unprocessable_entity
+            render :edit , status: :unprocessable_entity
         end
     end
     def destroy
