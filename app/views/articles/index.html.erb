@@ -1,6 +1,4 @@
-<%
-=begin%>
- <h1>Articles</h1>
+<h1>Articles</h1>
 Our blog has <%= Article.public_count %> articles and counting! 
 <ul>
     <% @articles.each do |article| %>
@@ -13,7 +11,6 @@ Our blog has <%= Article.public_count %> articles and counting!
 </ul>
 
 <%= link_to "New Article", new_article_path %> 
-<%
-=end%>
+
 
 <div id="welcome"></div>

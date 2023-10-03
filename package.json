@@ -6,6 +6,7 @@
     "autoprefixer": "^10.4.15",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
+    "esbuild": "^0.19.2",
     "nodemon": "^3.0.1",
     "postcss": "^8.4.28",
     "postcss-cli": "^10.1.0",
@@ -14,6 +15,7 @@
     "sass": "^1.66.1"
   },
   "scripts": {
+    "build:esbuild": "node esbuild.config.js",
     "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
     "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
     "build:css": "yarn build:css:compile && yarn build:css:prefix",
